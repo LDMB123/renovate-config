@@ -1,0 +1,46 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
+  "rangeStrategy": "pin",
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "groupName": "LDMB123 shared dev toolchain",
+      "matchPackageNames": [
+        "eslint",
+        "@eslint/js",
+        "typescript-eslint",
+        "eslint-plugin-n",
+        "eslint-plugin-promise",
+        "eslint-config-prettier",
+        "prettier",
+        "typescript",
+        "@types/node",
+        "globals",
+        "@LDMB123/tsconfig-base",
+        "@LDMB123/eslint-config",
+        "@LDMB123/prettier-config",
+        "@LDMB123/dev-preset"
+      ]
+    },
+    {
+      "groupName": "Cloudflare Worker toolchain",
+      "matchPackageNames": ["wrangler", "@cloudflare/workers-types"]
+    },
+    {
+      "groupName": "MCP SDK",
+      "matchPackageNames": ["@modelcontextprotocol/sdk", "mcp"]
+    },
+    {
+      "groupName": "React",
+      "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"]
+    },
+    {
+      "groupName": "wasm-bindgen",
+      "matchPackageNames": ["wasm-bindgen", "wasm-bindgen-cli"],
+      "prBodyNotes": [
+        "emerson-violin-pwa: after this bump, regenerate the committed src/wasm/*_bg.wasm + JS glue with a matching wasm-bindgen-cli version and verify with `git diff --exit-code` before merging. Do not merge a wasm-bindgen bump without the rebuild."
+      ]
+    }
+  ]
+}
