@@ -29,6 +29,7 @@
     },
     {
       "groupName": "MCP SDK",
+      "description": "Cross-ecosystem sibling packages: @modelcontextprotocol/sdk is the npm/TS MCP SDK, mcp is its PyPI counterpart. Grouped for dashboard visibility only — they version independently per registry.",
       "matchPackageNames": ["@modelcontextprotocol/sdk", "mcp"]
     },
     {
