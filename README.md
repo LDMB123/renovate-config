@@ -8,12 +8,13 @@ published `@LDMB123/*` packages and reusable CI workflows; this repo is the
 brain that keeps every repo's dependencies moving in lockstep with that
 policy over time.
 
-**Status:** authored locally, not yet created on GitHub or onboarded to any
-repo. Phase 1 canary is `bor-radio` — see `PLAN.md`'s Phase 1 gate ("Renovate
-opens the expected grouped PR") for how this gets proven before fanning out
-further.
+**Status:** created on GitHub (public, tagged `v1.0.0`) and onboarded to its
+Phase 1 canary, `bor-radio`, whose `renovate.json` extends
+`github>LDMB123/renovate-config#v1.0.0` alongside a still-live
+`.github/dependabot.yml` — see `PLAN.md`'s Phase 1 gate ("Renovate opens the
+expected grouped PR") for how this gets proven before fanning out further.
 
-## Adopt (per repo, once this repo exists on GitHub)
+## Adopt (per repo)
 
 ```json
 {
