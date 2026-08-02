@@ -16,11 +16,7 @@
         "prettier",
         "typescript",
         "@types/node",
-        "globals",
-        "@LDMB123/tsconfig-base",
-        "@LDMB123/eslint-config",
-        "@LDMB123/prettier-config",
-        "@LDMB123/dev-preset"
+        "globals"
       ]
     },
     {

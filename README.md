@@ -45,8 +45,8 @@ stays the fallback if Renovate misconfigures for that repo.
   `helpers:pinGitHubActionDigests` preset (SHA-digest pinning for GitHub
   Actions, per `PLAN.md` §Extended A).
 - `rangeStrategy: pin` fleet-wide — matches the plan's bleeding-edge/lockstep
-  stance; this is also why `lj-shared`'s new presets (`dev-preset` etc.) use
-  caret ranges internally but the *fleet* still gets exact-pin PRs.
+  stance: whatever ranges a package declares internally, the *fleet* still
+  gets exact-pin PRs.
 - `dependencyDashboard: true` — the single view for what's pending across the
   whole estate.
 - Five `packageRules` groups: shared dev toolchain, Cloudflare Worker
