@@ -74,10 +74,17 @@ The plan called for "regex managers for `compatibility_date` and
   `YYYY-MM-DD` value in `wrangler.jsonc`, so it would produce noise, not
   correct PRs.
 - Separately, `compatibility_date` changes *runtime behavior* (it's an
-  opt-in to new platform semantics, not a routine version bump) —
-  `lj-shared/cf-worker-base/README.md` already documents a **manual**
-  quarterly-sweep cadence for it. Auto-generating Renovate PRs here would
-  silently override that existing doctrine without a decision to do so.
+  opt-in to new platform semantics, not a routine version bump), so the
+  fleet cadence for it is deliberately **manual**: bump
+  `compatibility_date` across adopting Worker repos roughly once a quarter,
+  landing it either as one sweep commit across the cluster or as a
+  migration ticket per repo, so each move to new platform semantics is a
+  decision someone made. (That cadence was originally written down in
+  `lj-shared/cf-worker-base/README.md`, which was deleted with the rest of
+  the zero-consumer cf-worker-base cluster in `lj-shared` #61; it is
+  restated here so this repo's rationale does not depend on a deleted
+  file.) Auto-generating Renovate PRs here would silently override that
+  cadence without a decision to do so.
 
 Left as an explicit, named gap rather than shipped half-verified. Revisit if
 Cloudflare ever publishes a machine-readable compatibility-date feed, or if a
