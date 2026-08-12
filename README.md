@@ -8,9 +8,9 @@ published `@LDMB123/*` packages and reusable CI workflows; this repo is the
 brain that keeps every repo's dependencies moving in lockstep with that
 policy over time.
 
-**Status:** created on GitHub (public, tagged `v1.0.0`) and onboarded to its
+**Status:** created on GitHub (public, tagged `v1.0.1`) and onboarded to its
 Phase 1 canary, `bor-radio`, whose `renovate.json` extends
-`github>LDMB123/renovate-config#v1.0.0` alongside a still-live
+`github>LDMB123/renovate-config#v1.0.1` alongside a still-live
 `.github/dependabot.yml` — see `PLAN.md`'s Phase 1 gate ("Renovate opens the
 expected grouped PR") for how this gets proven before fanning out further.
 
@@ -93,6 +93,11 @@ deliberate decision is made to automate the quarterly sweep via Renovate's
 current fully-manual process.
 
 ## Verification
+
+The repository's **Validate preset** workflow pins the validator to
+`renovate@44.24.3`, runs it with `--strict`, and uses immutable commit pins for
+its GitHub Actions. Locally, run the same validator command before publishing a
+preset change.
 
 Proven at the `bor-radio` Phase-1 canary: onboard the repo, confirm Renovate
 opens the expected grouped PR(s) with the right groupings and `rangeStrategy:
